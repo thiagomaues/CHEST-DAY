@@ -15,13 +15,14 @@ ARQUIVO = "treinos.json"
 def carregar_treinos():
     if not os.path.exists(ARQUIVO):
         return []
+
     try:
         with open(ARQUIVO, "r", encoding="utf-8") as arquivo:
             return json.load(arquivo)
-    except (json.JSONDecodeError, OSError) as erro:
-    st.error(f"Erro ao carregar os treinos: {erro}")
-    st.stop()
 
+    except (json.JSONDecodeError, OSError) as erro:
+        st.error(f"Erro ao carregar os treinos: {erro}")
+        st.stop()
 # Salva a lista de treinos no arquivo JSON
 def salvar_treinos(treinos):
     with open(ARQUIVO, "w", encoding="utf-8") as arquivo:
