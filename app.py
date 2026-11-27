@@ -9,7 +9,7 @@ st.set_page_config(
     page_icon="🏋️"
 )
 
-ARQUIVO = "/content/drive/MyDrive/DiarioTreino/treinos.json"
+ARQUIVO = "treinos.json"
 
 # Carrega os treinos salvos
 def carregar_treinos():
@@ -32,7 +32,8 @@ def salvar_treinos(treinos):
         )
 
 
-ARQUIVO_FICHAS = "/content/drive/MyDrive/DiarioTreino/fichas.json"
+ARQUIVO_FICHAS = "fichas.json"
+
 
 def carregar_fichas():
     if not os.path.exists(ARQUIVO_FICHAS):
